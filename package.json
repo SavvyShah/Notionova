@@ -1,0 +1,36 @@
+{
+  "name": "notionova",
+  "version": "1.0.0",
+  "main": "main.js",
+  "private": true,
+  "description": "Capture your explosive ideas in one place. Pen-first philosophy",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SavvyShah/Notionova.git"
+  },
+  "keywords": [],
+  "engines": {
+    "node": "^18.0.0",
+    "npm": "^9.0.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SavvyShah/Notionova/issues"
+  },
+  "homepage": "https://github.com/SavvyShah/Notionova#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "electron": "^25.3.2",
+    "eslint": "^8.46.0",
+    "eslint-config-standard-with-typescript": "^37.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.33.1",
+    "typescript": "^5.1.6"
+  }
+}
