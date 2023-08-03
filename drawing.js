@@ -28,23 +28,22 @@ function draw(e) {
   ctx.beginPath();
   ctx.strokeStyle = penColor;
   ctx.lineWidth = 5;
-  ctx.moveTo(lastX, lastY);
-  ctx.lineTo(offsetX, offsetY);
-  ctx.stroke();
 
-  // Update the last mouse position
-  lastX = offsetX;
-  lastY = offsetY;
+  ctx.fillRect(offsetX, offsetY, 5, 5);
 }
 
 // Event listeners for pointer events
 canvas.addEventListener("pointerdown", (e) => {
   isDrawing = true;
-  lastX = e.offsetX;
-  lastY = e.offsetY;
+  lastX = e.clientX;
+  lastY = e.clientY;
 });
 
-canvas.addEventListener("pointermove", draw);
+canvas.addEventListener("pointermove", (e) => {
+  lastX = e.clientX;
+  lastY = e.clientY;
+  draw(e);
+});
 canvas.addEventListener("pointerup", () => (isDrawing = false));
 canvas.addEventListener("pointerout", () => (isDrawing = false));
 canvas.addEventListener("pointercancel", () => (isDrawing = false));
