@@ -1,36 +1,56 @@
 {
   "name": "notionova",
   "version": "1.0.0",
-  "main": "main.js",
   "private": true,
   "description": "Capture your explosive ideas in one place. Pen-first philosophy",
+  "productName": "notionova",
+  "main": ".webpack/main",
   "scripts": {
-    "start": "electron ."
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
   },
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SavvyShah/Notionova.git"
   },
-  "keywords": [],
   "engines": {
-    "node": "^18.0.0",
-    "npm": "^9.0.0"
+    "node": "^18.0.0"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/SavvyShah/Notionova/issues"
   },
   "homepage": "https://github.com/SavvyShah/Notionova#readme",
+  "author": {
+    "name": "Shubham Shah"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "electron": "^25.3.2",
-    "eslint": "^8.46.0",
-    "eslint-config-standard-with-typescript": "^37.0.0",
-    "eslint-plugin-import": "^2.28.0",
-    "eslint-plugin-n": "^16.0.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-react": "^7.33.1",
-    "typescript": "^5.1.6"
+    "@electron-forge/cli": "^6.2.1",
+    "@electron-forge/maker-deb": "^6.2.1",
+    "@electron-forge/maker-rpm": "^6.2.1",
+    "@electron-forge/maker-squirrel": "^6.2.1",
+    "@electron-forge/maker-zip": "^6.2.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.2.1",
+    "@electron-forge/plugin-webpack": "^6.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "@vercel/webpack-asset-relocator-loader": "1.7.3",
+    "css-loader": "^6.0.0",
+    "electron": "25.4.0",
+    "eslint": "^8.0.1",
+    "eslint-plugin-import": "^2.25.0",
+    "fork-ts-checker-webpack-plugin": "^7.2.13",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.0.0",
+    "ts-loader": "^9.2.2",
+    "ts-node": "^10.0.0",
+    "typescript": "~4.5.4"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
   }
 }
